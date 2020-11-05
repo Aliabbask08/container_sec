@@ -18,7 +18,8 @@ agent { Dockerfile true }
                      sh '''
                        cd src
                        terraform -v
-                       terraform init  
+                       terraform init 
+                       cd - 
                      '''
                 }
              }
@@ -27,7 +28,9 @@ agent { Dockerfile true }
              steps {
                  script{
                      sh '''
-                       terraform plan    
+                       cd src
+                       terraform plan
+                       cd -    
                      '''
           }
                }
