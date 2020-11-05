@@ -4,7 +4,8 @@ RUN apt-get update -y
 RUN apt-get install zip unzip -y 
 WORKDIR /usr/local/bin
 COPY bin/* .
-RUN unzip terraform_0.13.5_linux_amd64.zip 
-
+RUN unzip terraform_0.13.5_linux_amd64.zip
+WORKDIR /opt 
+COPY src .
 
 

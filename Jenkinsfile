@@ -16,10 +16,8 @@ pipeline {
              steps{
                 script{
                      sh '''
-                       cd src
                        terraform -v
                        terraform init 
-                       cd - 
                      '''
                 }
              }
@@ -28,9 +26,7 @@ pipeline {
              steps {
                  script{
                      sh '''
-                       cd src
                        terraform plan
-                       cd -    
                      '''
           }
                }
