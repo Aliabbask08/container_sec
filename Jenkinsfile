@@ -16,16 +16,18 @@ agent { Dockerfile true }
              steps{
                 script{
                      sh '''
-                        
+                       cd src
+                       terraform -v
+                       terraform init  
                      '''
                 }
              }
          }
-         stage ('Image_scanning'){
+         stage ('plan'){
              steps {
                  script{
                      sh '''
-                        
+                       terraform plan    
                      '''
           }
                }
