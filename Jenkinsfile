@@ -16,6 +16,8 @@ pipeline {
              steps{
                 script{
                      sh '''
+                       pwd
+                       ls -lh
                        terraform -v
                        terraform init 
                      '''
