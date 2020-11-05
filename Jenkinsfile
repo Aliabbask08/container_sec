@@ -16,7 +16,7 @@ agent any
              steps{
                 script{
                      sh '''
-                        docker build -t myimage:latest .
+                        sudo docker build -t myimage:latest .
                      '''
                 }
              }
@@ -25,7 +25,7 @@ agent any
              steps {
                  script{
                      sh '''
-                        trivy myimage:latest
+                        sudo trivy myimage:latest
                      '''
           }
                }
