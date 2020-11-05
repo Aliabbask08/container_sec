@@ -1,5 +1,5 @@
 pipeline {
-agent any
+agent { Dockerfile true }
      stages{
          stage('cleanWorkspace'){
             steps{
@@ -16,7 +16,7 @@ agent any
              steps{
                 script{
                      sh '''
-                        sudo docker build -t myimage:latest .
+                        
                      '''
                 }
              }
@@ -25,7 +25,7 @@ agent any
              steps {
                  script{
                      sh '''
-                        sudo trivy myimage:latest
+                        
                      '''
           }
                }
