@@ -15,8 +15,6 @@ pipeline {
          stage ('build'){
              steps{
                     sh 'pwd'
-                    sh 'terraform -v'
-                    sh 'terraform init'
                 }
          }
          stage ('plan'){
