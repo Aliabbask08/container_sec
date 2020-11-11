@@ -14,17 +14,15 @@ pipeline {
 
          stage ('build'){
              steps{
+                    sh 'pwd && ls -lh'
                     sh 'terraform -v'
+                    sh 'terraform init'
                 }
-             }
          }
          stage ('plan'){
              steps {
-                 script{
-                     sh '''
-                       terraform plan
-                     '''
-          }
+                    echo "Helloworld"
+                    sh 'ps -aux'
                }
                   }
 }
