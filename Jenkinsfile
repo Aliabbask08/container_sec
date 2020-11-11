@@ -14,10 +14,7 @@ pipeline {
 
          stage ('build'){
              steps{
-                script{
-                     sh '''
-                       terraform -v
-                     '''
+                    sh 'terraform -v'
                 }
              }
          }
